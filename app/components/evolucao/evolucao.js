@@ -3,22 +3,22 @@ import { ItemEvolucao } from "./item-evolucao"
 export const Evolucao = () => {
     const projetos = [
         {
-            imgUrl: "https://picsum.photos/320/240",
-            link: "https://github.com/jpc963/expo-social-app",
-            titulo: "Aplicativo de rede social",
+            imgUrl: "https://firebasestorage.googleapis.com/v0/b/portfolio-jpc.appspot.com/o/imgs%2Fifood-app.png?alt=media&token=21a93459-f281-4e3f-b69e-68062b00b2a1",
+            link: "https://github.com/jpc963/ifood-app",
+            titulo: "Ifood Stats",
             data: "2023",
             tecs: "React Native - Node.js",
             descricao:
-                "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat nostrud amet.",
+                "Aplicativo para controlar os receitas/gastos feitos por entregadores do Ifood.",
         },
         {
-            imgUrl: "https://picsum.photos/320/240",
+            imgUrl: "https://firebasestorage.googleapis.com/v0/b/portfolio-jpc.appspot.com/o/imgs%2Fprojeto-financas-django-react.png?alt=media&token=53cd4ebb-284c-4bf9-b5db-ce147ebeeea5",
             link: "https://github.com/jpc963/projeto-financa-django-react",
-            titulo: "Projeto de controle de finanças",
+            titulo: "Controle de finanças",
             data: "2022",
             tecs: "Django - React",
             descricao:
-                "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit off.",
+                "API para controle de finanças pessoais, com autenticação e autorização. Back-end feito com Django e Django Rest Framework, e front-end com React.",
         },
     ]
 
@@ -27,13 +27,9 @@ export const Evolucao = () => {
             <div className="md:mx-36 space-y-6">
                 <h2 className="text-slate-800 text-lg">Minha evolução</h2>
 
-                {projetos &&
-                    projetos.map((projeto, index) => (
-                        <ItemEvolucao
-                            key={index}
-                            {...projeto}
-                        />
-                    ))}
+                {projetos.map((projeto) => (
+                    <ItemEvolucao {...projeto} />
+                ))}
             </div>
         </div>
     )

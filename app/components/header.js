@@ -1,25 +1,4 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import Image from "next/image"
-
-import { getImage } from "@/actions/get-image"
-import { getCurriculo } from "@/actions/get-curriculo"
-
 export const Header = () => {
-    const [image, setImage] = useState("")
-
-    useEffect(() => {
-        async function getImageFromFirebase() {
-            const url = await getImage("perfil.jpg")
-
-            console.log(url)
-            setImage(url)
-        }
-
-        getImageFromFirebase()
-    }, [])
-
     const downloadCurriculo = () => {
         getCurriculo()
             .then((url) => {
@@ -52,16 +31,18 @@ export const Header = () => {
 
             <div className="md:flex-1 flex flex-col gap-6 items-center justify-center order-first lg:order-none">
                 <img
-                    src={image}
+                    src="https://firebasestorage.googleapis.com/v0/b/portfolio-jpc.appspot.com/o/imgs%2Fperfil.jpg?alt=media&token=b25e7583-137c-416f-8ceb-e590cf87ed7d"
                     alt="Profile picture"
                     className="rounded-full object-cover w-[243px] h-[243px]"
                 />
 
-                <button
-                    className="bg-red-400 rounded-sm py-2 px-6 text-white"
-                    onClick={() => downloadCurriculo()}
-                >
-                    Currículo
+                <button className="bg-red-400 rounded-sm py-2 px-6 text-white">
+                    <a
+                        href="https://firebasestorage.googleapis.com/v0/b/portfolio-jpc.appspot.com/o/pdfs%2Fcurriculo.pdf?alt=media&token=7902ec4f-e91a-4c19-8a77-5f89ea76efdf"
+                        target="_blank"
+                    >
+                        Currículo
+                    </a>
                 </button>
             </div>
         </div>

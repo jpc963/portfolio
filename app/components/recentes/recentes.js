@@ -4,19 +4,18 @@ export const Recentes = () => {
     const projetos = [
         {
             link: "https://github.com/jpc963/expo-social-app",
-            titulo: "Making a design system from scratch",
-            data: "19/02/2020",
-            tecs: "Django - React",
+            titulo: "Ifood Stats",
+            data: "10/2023",
+            tecs: "React Native - Node.js - Firebase",
             descricao:
-                "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat nostrud amet.",
+                "Aplicativo para controlar os receitas/gastos feitos por entregadores do Ifood - Em desenvolvimento",
         },
         {
             link: "https://github.com/jpc963/expo-social-app",
             titulo: "Social App",
-            data: "25/08/2023",
+            data: "09/2023",
             tecs: "React Native - Node.js - ExpoGO",
-            descricao:
-                "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit off.",
+            descricao: "Aplicativo teste de rede social - Concluído",
         },
     ]
     return (
@@ -37,13 +36,9 @@ export const Recentes = () => {
                 </div>
 
                 <div className="grid lg:grid-cols-2 space-y-4 lg:space-y-0 lg:space-x-4">
-                    {projetos &&
-                        projetos.map((projeto, index) => (
-                            <ItemRecentes
-                                key={index}
-                                {...projeto}
-                            />
-                        ))}
+                    {projetos.map((projeto) => (
+                        <ItemRecentes {...projeto} />
+                    ))}
                 </div>
             </div>
         </div>

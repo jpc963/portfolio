@@ -11,10 +11,10 @@ export const ItemEvolucao = ({
             <img
                 src={imgUrl}
                 alt="Placeholder"
-                className="w-full lg:w-80 h-60 rounded-md mr-5 object-cover mb-5"
+                className="lg:w-96 h-60 rounded-md mr-5 object-cover mb-5"
             />
 
-            <div className="space-y-7 lg:space-y-14 w-full mb-5">
+            <div className="space-y-7 lg:space-y-14 mb-5">
                 <div className="space-y-4">
                     <a
                         href={link}
